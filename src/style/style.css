@@ -667,6 +667,10 @@ input[type="submit"]:hover {
   margin-bottom: 8px;
   float: right;
 }
+.approve-pembayaran .belum-lunas:hover {
+  color: white;
+  background-color: #ff0000;
+}
 
 /* buat akun */
 .container-2 {
@@ -783,3 +787,4 @@ input[type="submit"]:hover {
   display: table-cell;
   border: 1px solid #CCC;
 }
+

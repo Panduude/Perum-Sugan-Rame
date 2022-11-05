@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1">
     <title>
-        Home
+        Kelola Keuangan
     </title>
     <link rel="stylesheet" href="/style/style.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
@@ -20,7 +20,7 @@
     <div class="nav">
         <ul>
             <li><a href="">Home</a></li>
-            <li><a href="/approve-pembayaran">Approve Pembayaran</a></li>
+            <li><a href="/approve_pembayaran">Approve Pembayaran</a></li>
             <li><a href="/kelola-keuangan">Kelola Keuangan</a></li>
             <li><a href="/buat_akun">Buat Akun</a></li>
             <li><a href="/input_perintah">Buat Perintah</a></li>
@@ -37,27 +37,27 @@
             </li>
         </ul>
     </div>
-    <div class="container">
-        <% berita.forEach(item=> { %>
-            <a href="/detail-berita/<%= item.idberita %>" style="text-decoration: none; color: inherit;">
-                <div class="card-body">
-                    <div class="card-img">
-                        <img src="<%= item.imgBerita %> " alt="">
-                    </div>
-                    <div class="card-content">
-                        <%= item.titleBerita %>
-                    </div>
-                </div>
-            </a>
-            <% }) %>
-    </div>
 
-    <footer class="footer-distributed">
-
-        <div class="footer-left">
-            <p class="footer-company-name">© 2022 Perum Sugan Rame</p>
+    <div class="container-kk">
+        <h4>Laporan Keuangan Perum Sugan Rame</h4>
+    <div class="container1">
+        <div class="heading">
+            <div class="board">No.</div>
+            <div class="board">Tanggal</div>
+            <div class="board">Keterangan</div>
+            <div class="board">Pemasukan</div>
+            <div class="board">Pengeluaran</div>
         </div>
-    </footer>
+        <% keuangan.forEach(item => { %> 
+        <div class="table-row">
+            <div class="board"><%= item.id_keuangan %></div>
+            <div class="board"><%= item.tanggal %></div>
+            <div class="board"><%= item.keterangan %></div>
+            <div class="board"><%= item.pemasukan %></div>
+            <div class="board"><%= item.pengeluaran %></div>
+        </div>
+        <% }) %>
+    </div>
+    </div>
 </body>
-
 </html>

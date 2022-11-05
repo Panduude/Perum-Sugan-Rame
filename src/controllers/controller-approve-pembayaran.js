@@ -13,7 +13,7 @@ module.exports = {
         throw err;
       }
       connection.query(
-        `SELECT * from pembayaran ORDER BY id_approve ASC`,
+        `SELECT * FROM pembayaran ORDER BY id_approve ASC`,
         (err, result) => {
           if (err) {
             throw err;

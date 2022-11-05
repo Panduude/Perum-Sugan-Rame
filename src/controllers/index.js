@@ -12,6 +12,7 @@ const prosesPembayaran = require('./controller-proses-pembayaran');
 const donePembayaran = require('./controller-done-pembayaran');
 const approvePembayaran = require('./controller-approve-pembayaran');
 const doneApprove = require('./controller-done-approve');
+const kelolaKeuangan = require('./controller-kelola-keuangan');
 
 module.exports ={
 	login,
@@ -27,5 +28,6 @@ module.exports ={
 	prosesPembayaran,
 	donePembayaran,
 	approvePembayaran,
-	doneApprove
+	doneApprove,
+	kelolaKeuangan,
 };

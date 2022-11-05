@@ -1,5 +1,5 @@
 const pool = require("../configs/database");
-const { connect } = require("../routes/router-app");
+// const { connect } = require("../routes/router-app");
 
 pool.on("error", (err) => {
   console.error(err);
@@ -14,17 +14,13 @@ module.exports = {
         throw err;
       }
       connection.query(
-        `UPDATE * FROM pembayaran WHERE id_approve = $1 ORDER BY id_approve ASC`,
+        `UPDATE pembayaran SET status_approve = true WHERE id_approve = $1`,
         [id_approve],
         (err, result) => {
           if (err) {
             throw err;
           }
-          res.render("approve-pembayaran", {
-            userName: req.session.username,
-            role: req.session.role,
-            pembayaran: result.rows,
-          });
+          res.redirect("/approve-pembayaran");
         }
       );
     });

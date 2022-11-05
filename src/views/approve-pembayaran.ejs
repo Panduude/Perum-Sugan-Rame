@@ -20,8 +20,8 @@
     <div class="nav">
         <ul>
             <li><a href="">Home</a></li>
-            <li><a href="/approve_pembayaran">Approve Pembayaran</a></li>
-            <li><a href="/kelola_keuangan">Kelola Keuangan</a></li>
+            <li><a href="/approve-pembayaran">Approve Pembayaran</a></li>
+            <li><a href="/kelola-keuangan">Kelola Keuangan</a></li>
             <li><a href="/buat_akun">Buat Akun</a></li>
             <li><a href="/input_perintah">Buat Perintah</a></li>
             <li class="dropdown">
@@ -46,10 +46,10 @@
                 <h4><%= item.judul_approve %> </h4>
                 <br>
                 <h2><%= item.ket_approve %> </h2>
-                <% if (item.status_approve = true) { %>
+                <% if (item.status_approve == true) { %>
                     <button class="lunas">Approved</button>
                 <% }  else { %>
-                    <button onclick="location.href = '/done-approve/<%= item.id_approve %>'"></button>
+                    <button onclick="location.href = '/done-approve/<%= item.id_approve %>'" class="belum-lunas">Approve</button>
                 <% } %>
             </div>
             <% }) %>
