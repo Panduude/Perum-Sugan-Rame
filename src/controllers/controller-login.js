@@ -26,20 +26,20 @@ module.exports = {
           `SELECT * FROM table_user WHERE user_email = $1 AND user_password = $2`,
           [email, password],
           (error, results) => {
-            let role = results.rows[0].role
+            let role = results.rows[0].user_role
             if (error) throw error;
             if (results.rows != 0) {
               if (role == 'admin') {
                 req.session.loggedin = true;
                 req.session.userid = results.rows[0].user_id;
                 req.session.username = results.rows[0].user_name;
-                req.session.role = results.rows[0].role;
+                req.session.role = results.rows[0].user_role;
                 res.redirect("/index-admin");
               } else if (role == 'warga'){
                 req.session.loggedin = true;
                 req.session.userid = results.rows[0].user_id;
                 req.session.username = results.rows[0].user_name;
-                req.session.role = results.rows[0].role;
+                req.session.role = results.rows[0].user_role;
                 res.redirect("/index-warga");
               }
               // Jika data ditemukan, set sesi user tersebut menjadi true

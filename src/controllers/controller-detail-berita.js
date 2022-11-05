@@ -21,10 +21,11 @@ module.exports = {
             url: "http://localhost:5050/",
             userName: req.session.username,
             role: req.session.role,
-            berita: results.rows
+            berita: results.rows,
           });
         }
-      );connection.release();
+      );
+      connection.release();
     });
   },
 };

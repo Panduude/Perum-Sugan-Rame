@@ -25,7 +25,7 @@ module.exports = {
             pembayaran: result.rows
           });
         }
-      );
+      );connection.release();
     });
   },
 };

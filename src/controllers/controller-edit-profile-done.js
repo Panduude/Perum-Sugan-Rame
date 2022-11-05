@@ -23,7 +23,7 @@ module.exports = {
             if (err) throw err;
             res.redirect('/profile')
         }
-      );
+      );connection.release();
     });
   },
 };
