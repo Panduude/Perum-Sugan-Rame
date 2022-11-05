@@ -11,6 +11,10 @@ const prosesPembayaranController = require('../controllers').prosesPembayaran;
 const donePembayaranController = require('../controllers').donePembayaran;
 const approvePembayaranController = require('../controllers').approvePembayaran;
 const doneApproveController = require('../controllers').doneApprove;
+const buatAkunController = require('../controllers').buatAkun;
+const simpanAkunController = require('../controllers').simpanAkun;
+const buatPembayaranController = require('../controllers').buatPembayaran;
+const simpanPembayaranController = require('../controllers').simpanPembayaran;
 const kelolaKeuanganController = require('../controllers').kelolaKeuangan;
 const verifyUser = require('../configs/verify');
 
@@ -27,6 +31,10 @@ router.get('/proses-pembayaran/:id', verifyUser.isLogin, prosesPembayaranControl
 router.get('/done-pembayaran', verifyUser.isLogin, donePembayaranController.donePembayaran);
 router.get('/approve-pembayaran', verifyUser.isLogin, approvePembayaranController.approvePembayaran);
 router.get('/done-approve/:id', verifyUser.isLogin, doneApproveController.doneApprove);
+router.get('/buat-akun', verifyUser.isLogin, buatAkunController.buatAkun);
+router.post('/simpan-akun', verifyUser.isLogin, simpanAkunController.simpanAkun);
+router.get('/buat-pembayaran', verifyUser.isLogin, buatPembayaranController.buatPembayaran);
+router.post('/simpan-pembayaran', verifyUser.isLogin, simpanPembayaranController.simpanPembayaran);
 router.get('/kelola-keuangan', verifyUser.isLogin, kelolaKeuanganController.kelolaKeuangan)
 
 module.exports = router;

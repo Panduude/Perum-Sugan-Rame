@@ -23,10 +23,10 @@
         <ul>
             <% if (role=='admin' ) { %>
                 <li><a href="/index-admin">Home</a></li>
-                <li><a href="/approve_pembayaran">Approve Pembayaran</a></li>
-                <li><a href="/kelola_keuangan">Kelola Keuangan</a></li>
-                <li><a href="/buat_akun">Buat Akun</a></li>
-                <li><a href="/input_perintah">Buat Perintah</a></li>
+                <li><a href="/approve-pembayaran">Approve Pembayaran</a></li>
+                <li><a href="/kelola-keuangan">Kelola Keuangan</a></li>
+                <li><a href="/buat-akun">Buat Akun</a></li>
+                <li><a href="/input-perintah">Buat Perintah</a></li>
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn">
                         <p>Hallo, <%= userName %>
@@ -49,8 +49,8 @@
                             <i class="bi bi-person-circle icon-user-nav"></i>
                         </a>
                         <div class="dropdown-content">
-                            <a href="/profile_warga">Profile</a>
-                            <a href="/login">Logout</a>
+                            <a href="<%= url %>profile">Profile</a>
+                            <a href="<%= url %>login/logout">Logout</a>
                         </div>
                         <% } %>
         </ul>

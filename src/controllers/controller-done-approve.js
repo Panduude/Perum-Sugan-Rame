@@ -1,5 +1,4 @@
-const pool = require("../configs/database");
-// const { connect } = require("../routes/router-app");
+const pool = require("../configs/database")
 
 pool.on("error", (err) => {
   console.error(err);
@@ -20,9 +19,9 @@ module.exports = {
           if (err) {
             throw err;
           }
-          res.redirect("/approve-pembayaran");
+          res.redirect('/approve-pembayaran')
         }
-      );
+      );connection.release();
     });
   },
 };

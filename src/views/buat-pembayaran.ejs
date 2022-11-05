@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
 
@@ -23,7 +25,7 @@
             <li><a href="/approve-pembayaran">Approve Pembayaran</a></li>
             <li><a href="/kelola-keuangan">Kelola Keuangan</a></li>
             <li><a href="/buat-akun">Buat Akun</a></li>
-            <li><a href="/buat-pembayaran">Buat Perintah</a></li>
+            <li><a href="/input-perintah">Buat Perintah</a></li>
             <li class="dropdown">
                 <a href="javascript:void(0)" class="dropbtn">
                     <p>Hallo, <%= userName %>
@@ -37,27 +39,30 @@
             </li>
         </ul>
     </div>
-    <div class="container">
-        <% berita.forEach(item=> { %>
-            <a href="/detail-berita/<%= item.idberita %>" style="text-decoration: none; color: inherit;">
-                <div class="card-body">
-                    <div class="card-img">
-                        <img src="<%= item.imgBerita %> " alt="">
+    <div class="container-2">
+        <div class="container-perintah">
+            <h4>Ajukan Pembayaran</h4>
+            <form action="/simpan-pembayaran" method="POST" >
+                <div class="row">
+                    <div class="col-25">
+                        <label  for="judulpembayaran">Judul Pembayaran</label>
                     </div>
-                    <div class="card-content">
-                        <%= item.titleBerita %>
+                    <div class="col-75">
+                        <input name="judulpembayaran" type="text">
                     </div>
                 </div>
-            </a>
-            <% }) %>
-    </div>
-
-    <footer class="footer-distributed">
-
-        <div class="footer-left">
-            <p class="footer-company-name">© 2022 Perum Sugan Rame</p>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="nominalpembayaran">Nominal</label>
+                    </div>
+                    <div class="col-75">
+                        <input name="nominalpembayaran" type="text">
+                    </div>
+                </div>
+                <button class="btn-bayar">Submit</button>
+            </form>
         </div>
-    </footer>
+    </div>
 </body>
 
 </html>

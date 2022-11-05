@@ -12,6 +12,10 @@ const prosesPembayaran = require('./controller-proses-pembayaran');
 const donePembayaran = require('./controller-done-pembayaran');
 const approvePembayaran = require('./controller-approve-pembayaran');
 const doneApprove = require('./controller-done-approve');
+const buatAkun = require('./controller-buat-akun');
+const simpanAkun = require('./controller-simpan-akun');
+const buatPembayaran = require('./controller-buat-pembayaran');
+const simpanPembayaran = require('./controller-simpan-pembayaran');
 const kelolaKeuangan = require('./controller-kelola-keuangan');
 
 module.exports ={
@@ -29,5 +33,9 @@ module.exports ={
 	donePembayaran,
 	approvePembayaran,
 	doneApprove,
+	buatAkun,
+	simpanAkun,
+	buatPembayaran,
+	simpanPembayaran,
 	kelolaKeuangan,
 };

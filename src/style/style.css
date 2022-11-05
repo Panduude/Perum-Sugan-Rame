@@ -684,7 +684,7 @@ input[type="submit"]:hover {
   display: block;
   margin-bottom: 20px;
   width: 75%;
-  height: 540px;
+  height: 370px;
   border: 1px solid rgb(214, 214, 214);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 8px;
@@ -713,6 +713,15 @@ input[type="submit"]:hover {
   border: 1px solid rgb(214, 214, 214);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 8px;
+}
+
+.container-perintah h4{
+  text-align: center;
+  font-family: cursive;
+  font-weight: 500;
+  font-size: x-large;
+  margin-bottom: 20px;
+
 }
 
 .container-perintah select {
