@@ -9,6 +9,8 @@ const kelolaPembayaranController = require('../controllers').kelolaPembayaran;
 const dataPembayaranController = require('../controllers').dataPembayaran;
 const prosesPembayaranController = require('../controllers').prosesPembayaran;
 const donePembayaranController = require('../controllers').donePembayaran;
+const approvePembayaranController = require('../controllers').approvePembayaran;
+const doneApproveController = require('../controllers').doneApprove;
 const verifyUser = require('../configs/verify');
 
 router.get('/', verifyUser.isLogin, homeControllerAdmin.homeAdmin);
@@ -22,5 +24,7 @@ router.get('/kelola-pembayaran', verifyUser.isLogin, kelolaPembayaranController.
 router.get('/data-pembayaran/:id', verifyUser.isLogin, dataPembayaranController.dataPembayaran);
 router.get('/proses-pembayaran/:id', verifyUser.isLogin, prosesPembayaranController.prosesPembayaran);
 router.get('/done-pembayaran', verifyUser.isLogin, donePembayaranController.donePembayaran);
+router.get('/approve-pembayaran', verifyUser.isLogin, approvePembayaranController.approvePembayaran);
+router.get('/done-approve/:id', verifyUser.isLogin, doneApproveController.doneApprove);
 
 module.exports = router;

@@ -10,6 +10,8 @@ const kelolaPembayaran = require('./controller-kelola-pembayaran');
 const dataPembayaran = require('./controller-data-pembayaran');
 const prosesPembayaran = require('./controller-proses-pembayaran');
 const donePembayaran = require('./controller-done-pembayaran');
+const approvePembayaran = require('./controller-approve-pembayaran');
+const doneApprove = require('./controller-done-approve');
 
 module.exports ={
 	login,
@@ -23,5 +25,7 @@ module.exports ={
 	kelolaPembayaran,
 	dataPembayaran,
 	prosesPembayaran,
-	donePembayaran
+	donePembayaran,
+	approvePembayaran,
+	doneApprove
 };
